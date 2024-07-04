@@ -6,7 +6,7 @@ module.exports = {
   config: {
     name: "info",
     version: "1.0",
-    author: "deepam",
+    author: "Aljur Pogoy",
     role: 0,
     cooldown: 5,
     shortDescription: {
@@ -26,8 +26,8 @@ module.exports = {
 
   onStart: async function ({ message, prefix }) {
     const botPrefix = prefix; // Use the provided bot prefix
-    const authorName = "Dee Pam";
-    const authorFB = "https://www.facebook.com/deepamdajuuu";
+    const authorName = "Aljur Pogoy";
+    const authorFB = "https://www.facebook.com/profile.php?id=100073129302064";
 
     const now = moment().tz('Asia/Kathmandu');
     const date = now.format('MMMM Do YYYY');
