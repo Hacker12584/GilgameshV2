@@ -23,6 +23,6 @@ module.exports = {
 		const hours = Math.floor((uptime / (60 * 60)) % 24);
 		const days = Math.floor(uptime / (60 * 60 * 24));
 		const uptimeString = `${hours} hours ${minutes} minutes ${seconds} second`;
-		api.sendMessage(`Hello user⚔, the Gilgamesh bot has been running for ${uptimeString}.`, event.threadID);
+		api.sendMessage(`⚔️Hello⚔️Master⚔️, the⚔️Gilgamesh⚔️bot⚔️has⚔️been⚔️running⚔️or ${uptimeString}.`, event.threadID);
 	}
 };
