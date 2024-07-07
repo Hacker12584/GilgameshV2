@@ -96,7 +96,7 @@ function handleReply(api, event, args, message) {
 const singCommand = {
   name: "sing",
   version: "2.0",
-  author: "Aljur Pogoy",
+  author: "Vex_kshitiz",
   countDown: 10,
   role: 0,
   shortDescription: "play music from yt",
