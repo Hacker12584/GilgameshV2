@@ -55,7 +55,7 @@ config: {
  name: "ai",
 aliases: [],
 version: 1.6,
-author: "Aljur Pogoy",
+author: "Aljur Pogoy & Jun jaam ",
 role: 0,
  shortDescription: "An AI that can do various tasks",
  guide: "{pn} <query>",
