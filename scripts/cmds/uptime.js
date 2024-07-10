@@ -1,28 +1,13 @@
 module.exports = {
-	config: {
-		name: "uptime",
-		aliases: ["up", "upt"],
-		version: "1.0",
-		author: "Aljur Pogoy",
-		role: 0,
-		shortDescription: {
-			en: "Displays the uptime of the bot."
-		},
-		longDescription: {
-			en: "Displays the amount of time that the bot has been running for."
-		},
-		category: "System",
-		guide: {
-			en: "Use {p}uptime to display the uptime of the bot."
-		}
-	},
-	onStart: async function ({ api, event, args }) {
-		const uptime = process.uptime();
-		const seconds = Math.floor(uptime % 60);
-		const minutes = Math.floor((uptime / 60) % 60);
-		const hours = Math.floor((uptime / (60 * 60)) % 24);
-		const days = Math.floor(uptime / (60 * 60 * 24));
-		const uptimeString = `${hours} hours ${minutes} minutes ${seconds} second`;
-		api.sendMessage(`Hello Users💛, the Gilgamesh bot has been running for ${uptimeString}.`, event.threadID);
-	}
+config: {
+name: "uptime",
+category: "System"
+},
+onStart: async function({message}) {
+const d = Math.floor(process.uptime() / 86400 );
+const h = Math.floor(process.uptime() / 3600 % 24 );
+const m = Math.floor((process.uptime() % 3600) / 60);
+const s = Math.floor(process.uptime() % 60);
+message.reply(`The Bot has been running for:\n${d}days ${h}hrs ${m}mins ${s}secs`);
+}
 };
