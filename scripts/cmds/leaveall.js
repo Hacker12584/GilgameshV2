@@ -3,14 +3,14 @@ const fs = require('fs');
 module.exports = {
   config: {
     name: "leaveall",
-    aliases: ["approveonly"],
+    aliases: ["outall"],
     version: "1.0",
     author: "Aljur Pogoy",
     countDown: 5,
     role: 2,
     category: "owner"
   },
-  onStart: async function ({ api, args, message, event }) {
+  onStart: async function ({ threadsData, api, args, message, event }) {
     const approveList = JSON.parse(fs.readFileSync('groups.json', 'utf8'));
 
     const threadList = await api.getThreadList(100, null, ["INBOX"]);
